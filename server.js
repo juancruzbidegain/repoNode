@@ -1,13 +1,13 @@
 
 const express = require("express");
+const router = require("./network/routes")
+
 const app = express();
-const response = require("./network/response")
-
-const router = require("./components/message/network")
 
 
-app.use(router)
+// app.use(router)
 
+router(app)
 
 app.use('/app', express.static('public'))
 
